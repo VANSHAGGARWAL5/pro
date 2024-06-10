@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the page -->
+    <title>Pizza Order Form</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header section with the logo and tagline -->
+    <header>
+        <h1>Welcome to Pizza Palace</h1>
+    </header>
+    <!-- Main content section with the form and image -->
+    <main>
+        <!-- Form for ordering pizzas -->
+        <form action="index1.html" method="post">
+            <fieldset>
+                <legend>Order Information</legend>
+                <!-- Input for the number of pizzas -->
+                <label for="numPizzas">Number of Pizzas:</label>
+                <input type="number" id="numPizzas" name="numPizzas" min="1" max="10" required>
+
+                <!-- Input for the number of pizzas -->
+                <label for="size">Size:</label>
+                <select id="size" name="size" required>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+
+                <!-- Select for the pizza shape -->
+                <label for="shape">Shape:</label>
+                <select name="shape" id="shape">
+                    <option value="round">Round</option>
+                    <option value="square">Square</option>
+                </select>
+                <br><br>
+
+                <!-- Textarea for the toppings -->
+                <legend>Toppings:</legend>
+                <label>
+                    <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
+                    Pepperoni
+                </label>
+                <label>
+                    <input type="checkbox" id="mushrooms" name="toppings" value="mushrooms">
+                    Mushrooms
+                </label>
+                <label>
+                    <input type="checkbox" id="olives" name="toppings" value="olives">
+                    Olives
+                </label>
+
+
+                <!-- Select for the crust type -->
+                <label for="crust-type">Crust Type:</label>
+                <select id="crust-type" name="crust-type">
+                    <option value="deep-dish">Deep Dish</option>
+                    <option value="thin-crust">Thin Crust</option>
+                    <option value="gluten-free">Gluten-Free</option>
+                </select>
+                <br><br>
+
+                <!-- Delivery Options -->
+                <legend>Delivery Options</legend>
+                <label>
+                    <input type="radio" id="takeout" name="delivery" value="takeout" checked>
+                    Takeout
+                </label><br>
+                <label>
+                    <input type="radio" id="delivery" name="delivery" value="delivery">
+                    Delivery
+                </label><br>
+                <label>
+                    <input type="radio" id="eat_in" name="delivery" value="eat-in">
+                    Eat-in
+                </label><br>
+
+
+                <label for="delivery-time">Delivery Time:</label>
+                <input type="datetime-local" id="delivery-time" name="delivery-time"><br>
+                <label for="delivery_address">Delivery Address:</label><br>
+                <textarea id="delivery_address" name="delivery_address" rows="4" cols="50"></textarea><br>
+
+                <label for="notes">Additional Notes:</label>
+                <textarea id="notes" name="notes" rows="4" cols="50"></textarea>
+            </fieldset>
+
+            <!-- Submit and reset button-->
+            <input type="submit" value="Place Order">
+            <input type="reset" value="Reset">
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Pizza Palace. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
